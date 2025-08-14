@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Registered</title>
+      <link rel="stylesheet" href="style_registered.css">
+  </head>
+  <body>
+
+    <div class="container">
+      <h2 id="message"></h2>
+      <a href="/"> Go back to Login Page </a>
+    </div>
+      
+      <script>
+          
+            const params = new URLSearchParams(window.location.search);
+            let username = params.get("username");
+            //username = username[0] + username.substring(1, username.length);
+
+            const messageEl = document.getElementById("message");
+            if (username) 
+            {
+              messageEl.textContent = `${username} Logged in successfully`;
+            } 
+            else 
+            {
+              messageEl.textContent = "Logged in successful";
+            }
+            
+      </script>
+  </body>
+</html>
