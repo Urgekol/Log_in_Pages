@@ -15,9 +15,8 @@
       
       <script>
           
-            const params = new URLSearchParams(window.location.search);
+            const params = new URLSearchParams(window.location.search);   // value from parameter
             let username = params.get("username");
-            //username = username[0] + username.substring(1, username.length);
 
             const messageEl = document.getElementById("message");
             if (username) 
