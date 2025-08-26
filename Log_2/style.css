@@ -1,0 +1,22 @@
+body{
+    background-color: #04c582;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2e3137;
+    width: 450px;
+    height: 470px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    top: 50%;
+}
+
