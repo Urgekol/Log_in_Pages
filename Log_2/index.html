@@ -9,37 +9,47 @@
   <body>
 
     <div class="container">
-      <div class="image_logo">
-        <!-- Logo or image goes here -->
-      </div>
 
-      <!-- Buttons -->
+      <div class="image_container">
+        <div class="image_logo">
+          <!-- image -->
+        </div>
+      </div>
+      
+
+      <!-- heading -->
       <div class="heading">
-        <button id="p_login" class="active">Login</button>
-        <button id="p_signin">Sign Up</button>
+
+        <div class="tabs">
+          <button id="p_login" class="active">Login</button>
+          <button id="p_signin">Sign Up</button>
+        </div>
+
+        <div class="heading_line">
+          <hr id="login-line" class="active-line">
+          <hr id="signup-line">
+        </div>
+
       </div>
 
-      <!-- Underline indicators -->
-      <div class="heading_line">
-        <hr id="login-line" class="active-line">
-        <hr id="signup-line">
-      </div>
-
-      <!-- Form section -->
+      <!-- form section -->
       <div class="form-feed">
         <form>
           <label for="email">Email</label>
           <input type="email" id="email" required>
+
           <label for="password">Password</label>
           <input type="password" id="password" required>
+
           <button type="submit" class="submit">Submit</button>
         </form>
       </div>
 
-      <!-- Forgot password link -->
+      <!-- forgot password link -->
       <div id="forgot">
         <a href="javascript:void(0)">Forgot your password?</a>
       </div>
+
     </div>
 
     <script src="index.js"></script>

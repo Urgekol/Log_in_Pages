@@ -5,9 +5,11 @@ const signupLine = document.getElementById("signup-line");
 const formFeed = document.querySelector(".form-feed form");
 const container = document.querySelector(".container");
 const forgot = document.getElementById("forgot");
+const submitBtn = document.querySelector(".submit");
 
 // --- Reset to Default Login ---
-function setLoginView() {
+function setLoginView() 
+{
     loginBtn.classList.add("active");
     signupBtn.classList.remove("active");
     loginLine.classList.add("active-line");
@@ -29,7 +31,8 @@ function setLoginView() {
 }
 
 // --- Reset to Signup View ---
-function setSignupView() {
+function setSignupView() 
+{
     signupBtn.classList.add("active");
     loginBtn.classList.remove("active");
     signupLine.classList.add("active-line");
@@ -55,7 +58,8 @@ function setSignupView() {
 }
 
 // --- Forgot Password View ---
-function setForgotView() {
+function setForgotView() 
+{
     loginBtn.innerHTML = "Reset Password";
     signupBtn.innerHTML = "Back";
     loginBtn.classList.add("active");
@@ -74,6 +78,7 @@ function setForgotView() {
 
     // OTP button loader trigger
     const sendOtpBtn = formFeed.querySelector(".submit");
+
     sendOtpBtn.addEventListener("click", (e) => {
         e.preventDefault();
         showLoader();
@@ -84,9 +89,12 @@ function setForgotView() {
 loginBtn.addEventListener("click", setLoginView);
 
 signupBtn.addEventListener("click", () => {
-    if (signupBtn.innerHTML === "Back") {
+    if (signupBtn.innerHTML === "Back") 
+    {
         setLoginView();
-    } else {
+    } 
+    else 
+    {
         setSignupView();
     }
 });
@@ -96,7 +104,14 @@ forgot.addEventListener("click", setForgotView);
 // --- Default State ---
 setLoginView();
 
-function showLoader() {
-    formFeed.innerHTML = `<span class="loader"></span>`;
-    container.style.height = "200px";
-}
+
+submitBtn.addEventListener("click", (e) => {
+    const container = document.querySelector(".container"); 
+    
+    container.innerHTML = `
+        <div class="center">
+            <div class="loader"></div>
+        </div>
+    `;
+});
+

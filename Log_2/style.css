@@ -1,22 +1,218 @@
-body{
-    background-color: #04c582;
-}
-
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #2e3137;
-    width: 450px;
-    height: 470px;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    flex-direction: column;
-    gap: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    top: 50%;
+    font-family: Arial, sans-serif;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #04c582;
+    z-index: -1;
+}
+/* Container */
+.container {
+    position: relative;
+    width: 410px;              /* fixed width */
+    background: #2e3137;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease; /* smooth size transitions */
+    padding: 60px 20px 20px;   /* reduced padding to fit better */
+    z-index: 0;
+}
+
+
+/* Floating Logo */
+.image_container {
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    transform: translateX(-50%);  /* keeps it perfectly centered */
+    width: 110px;
+    height: 110px;
+    background-color: #717985;
+    border: 4px solid #444950;  /* brand green border for highlight */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* makes it pop */
+}
+
+/* Logo inside the container */
+.image_logo {
+    width: 90px;
+    height: 90px;
+    background: url("logo.png") center/cover no-repeat;
+    background-size: 200%;
+    border-radius: 50%;
+}
+.heading {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 27px;
+}
+
+/* button row only */
+.tabs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tabs button {
+    flex: 1;
+    padding: 12px 0;
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Active tab */
+.tabs button.active {
+    color: #fff;
+}
+
+/* Inactive tab */
+.tabs button:not(.active) {
+    color: #888;
+}
+
+/* line row */
+.heading_line {
+    display: flex;
+    margin-bottom: 35px;
+}
+
+.heading_line hr {
+    flex: 1;
+    border: none;
+    height: 3px;
+    background-color: #636b7b; /* default inactive color */
+    transition: background 0.3s ease;
+}
+
+/* active underline */
+#login-line.active-line,
+#signup-line.active-line {
+    background-color: #fff; /* active tab color */
+}
+.form-feed form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-feed label {
+    color: #636b7b;
+    font-size: 15px;
+    margin-bottom: 6px;   /* space between label & input */
+    font-weight: 600;     /* change here → try 400, 500, 600, or bold */
+}
+
+.form-feed input {
+    padding: 12px;
+    margin-bottom: 35px;      /* space between inputs */
+    border-radius: 8px;
+    outline: none;
+    background-color: #636b7b; /* input background */
+    color: #f9fafa;            /* text color inside input */
+    font-size: large;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+button.submit {
+    position: relative;
+    left: 100px;               /* move button horizontally */
+    width: 50%;
+    padding: 10px;
+    background: #04c582;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-bottom: 10px;
+}
+
+button.submit:hover {
+    background: #099564;
+}
+
+/* Forgot password */
+#forgot {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#forgot a {
+    font-size: 14px;
+    color: #545d6a;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#forgot a:hover {
+    color: #fff;
+}
+
+/* Loader design */
+.loader {
+  color: #ffffff;
+  font-size: 45px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  animation: mltShdSpin 1.7s infinite ease, rotateLoader 1.7s infinite linear;
+}
+
+/* Dots animation */
+@keyframes mltShdSpin {
+  0%, 5%, 95%, 100% {
+    box-shadow: 
+      0 -0.83em 0 -0.4em,
+      0 -0.83em 0 -0.42em, 
+      0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em, 
+      0 -0.83em 0 -0.477em;
+  }
+  10%, 59% {
+    box-shadow: 
+      0 -0.83em 0 -0.4em, 
+      -0.087em -0.825em 0 -0.42em, 
+      -0.173em -0.812em 0 -0.44em, 
+      -0.256em -0.789em 0 -0.46em, 
+      -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 
+      0 -0.83em 0 -0.4em, 
+      -0.338em -0.758em 0 -0.42em,
+      -0.555em -0.617em 0 -0.44em, 
+      -0.671em -0.488em 0 -0.46em, 
+      -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 
+      0 -0.83em 0 -0.4em, 
+      -0.377em -0.74em 0 -0.42em,
+      -0.645em -0.522em 0 -0.44em, 
+      -0.775em -0.297em 0 -0.46em, 
+      -0.82em -0.09em 0 -0.477em;
+  }
+}
+
+/* Rotation animation (separate so it doesn't override shadows) */
+@keyframes rotateLoader {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
