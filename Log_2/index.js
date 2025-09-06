@@ -10,6 +10,9 @@ const submitBtn = document.querySelector(".submit");
 // --- Reset to Default Login ---
 function setLoginView() 
 {
+    const existingEmailInput = document.getElementById("email");
+    const typedEmail = existingEmailInput ? existingEmailInput.value : "";
+
     loginBtn.classList.add("active");
     signupBtn.classList.remove("active");
     loginLine.classList.add("active-line");
@@ -26,6 +29,9 @@ function setLoginView()
         <button type="submit" class="submit">Submit</button>
     `;
 
+    const loginEmailInput = document.getElementById("email");
+    loginEmailInput.value = typedEmail;
+
     forgot.style.display = "block";
     container.style.height = "470px";
 }
@@ -33,6 +39,9 @@ function setLoginView()
 // --- Reset to Signup View ---
 function setSignupView() 
 {
+    const existingEmailInput = document.getElementById("email");
+    const typedEmail = existingEmailInput ? existingEmailInput.value : "";
+
     signupBtn.classList.add("active");
     loginBtn.classList.remove("active");
     signupLine.classList.add("active-line");
@@ -53,6 +62,9 @@ function setSignupView()
         <button type="submit" class="submit">Sign Up</button>
     `;
 
+    const signupEmailInput = document.getElementById("email");
+    signupEmailInput.value = typedEmail;
+
     forgot.style.display = "none";
     container.style.height = "650px";
 }
@@ -60,6 +72,9 @@ function setSignupView()
 // --- Forgot Password View ---
 function setForgotView() 
 {
+    const existingEmailInput = document.getElementById("email");
+    const typedEmail = existingEmailInput ? existingEmailInput.value : "";
+
     loginBtn.innerHTML = "Reset Password";
     signupBtn.innerHTML = "Back";
     loginBtn.classList.add("active");
@@ -73,17 +88,19 @@ function setForgotView()
         <button type="submit" class="submit">Send OTP</button>
     `;
 
+    const forgotEmailInput = document.getElementById("email");
+    forgotEmailInput.value = typedEmail;
+
     forgot.style.display = "none";
     container.style.height = "350px";
 
-    // OTP button loader trigger
     const sendOtpBtn = formFeed.querySelector(".submit");
-
     sendOtpBtn.addEventListener("click", (e) => {
         e.preventDefault();
         showLoader();
     });
 }
+
 
 // --- Event Listeners ---
 loginBtn.addEventListener("click", setLoginView);
