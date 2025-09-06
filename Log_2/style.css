@@ -1,4 +1,4 @@
-/* General Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -14,38 +14,36 @@ body {
     background: #04c582;
     z-index: -1;
 }
-/* Container */
+
 .container {
     position: relative;
-    width: 410px;              /* fixed width */
+    width: 410px;             
     background: #2e3137;
     border-radius: 25px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    transition: all 0.3s ease; /* smooth size transitions */
-    padding: 60px 20px 20px;   /* reduced padding to fit better */
+    transition: all 0.3s ease; 
+    padding: 60px 20px 20px;  
     z-index: 0;
 }
 
 
-/* Floating Logo */
 .image_container {
     position: absolute;
     top: -55px;
     left: 50%;
-    transform: translateX(-50%);  /* keeps it perfectly centered */
+    transform: translateX(-50%); 
     width: 110px;
     height: 110px;
     background-color: #717985;
-    border: 4px solid #444950;  /* brand green border for highlight */
+    border: 4px solid #444950;  
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 10;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* makes it pop */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
-/* Logo inside the container */
 .image_logo {
     width: 90px;
     height: 90px;
@@ -59,7 +57,6 @@ body {
     margin-bottom: 27px;
 }
 
-/* button row only */
 .tabs {
     display: flex;
     justify-content: space-between;
@@ -76,17 +73,14 @@ body {
     transition: color 0.3s ease;
 }
 
-/* Active tab */
 .tabs button.active {
     color: #fff;
 }
 
-/* Inactive tab */
 .tabs button:not(.active) {
     color: #888;
 }
 
-/* line row */
 .heading_line {
     display: flex;
     margin-bottom: 35px;
@@ -96,14 +90,13 @@ body {
     flex: 1;
     border: none;
     height: 3px;
-    background-color: #636b7b; /* default inactive color */
+    background-color: #636b7b; 
     transition: background 0.3s ease;
 }
 
-/* active underline */
 #login-line.active-line,
 #signup-line.active-line {
-    background-color: #fff; /* active tab color */
+    background-color: #fff; 
 }
 .form-feed form {
     display: flex;
@@ -113,24 +106,24 @@ body {
 .form-feed label {
     color: #636b7b;
     font-size: 15px;
-    margin-bottom: 6px;   /* space between label & input */
-    font-weight: 600;     /* change here → try 400, 500, 600, or bold */
+    margin-bottom: 6px;   
+    font-weight: 600;     
 }
 
 .form-feed input {
     padding: 12px;
-    margin-bottom: 35px;      /* space between inputs */
+    margin-bottom: 35px;      
     border-radius: 8px;
     outline: none;
-    background-color: #636b7b; /* input background */
-    color: #f9fafa;            /* text color inside input */
+    background-color: #636b7b; 
+    color: #f9fafa;           
     font-size: large;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 button.submit {
     position: relative;
-    left: 100px;               /* move button horizontally */
+    left: 100px;              
     width: 50%;
     padding: 10px;
     background: #04c582;
