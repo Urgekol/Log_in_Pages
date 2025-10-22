@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="left">
+        <h1>Welcome Back</h1>
+        <p class="subtitle">Please log in to continue</p>
+
+        <form id="loginForm" class="login-form" autocomplete="off">
+
+          <div class="inputs">
+
+            <div class="input-group">
+              <i class="fa-regular fa-envelope"></i>
+              <input type="email" id="email" placeholder="example@gmail.com" required />
+            </div>
+
+            <div class="input-group">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="password" placeholder="Password" required />
+              <i class="fa-regular fa-eye toggle" id="togglePassword"></i>
+            </div>
+
+          </div>
+
+          <div class="options">
+
+            <label>
+              <input type="checkbox" id="remember" /> Remember me
+            </label>
+
+            <span class="forgot-password" id="forgotPassword">Forgot password?</span>
+          </div>
+
+          <button type="submit" class="login-btn" id="loginBtn">Log in</button>
+
+          <div class="divider">
+            <span>or continue with</span>
+          </div>
+
+          <div class="firebase">
+
+            <button type="button" class="google-btn" id="googleBtn">
+              <i class="fa-brands fa-google"></i> Google
+            </button>
+
+            <button type="button" class="github-btn" id="githubBtn">
+              <i class="fa-brands fa-github"></i> GitHub
+            </button>
+
+          </div>
+
+          <div class="register-section">
+
+            <p>Don't have an account?</p>
+            <button type="button" id="goToRegister" class="register-btn">
+              Register
+            </button>
+            
+          </div>
+        </form>
+      </div>
+
+      <div class="right">
+        <img src="flowerida.jpg" alt="flowerida" />
+      </div>
+
+    </div>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>

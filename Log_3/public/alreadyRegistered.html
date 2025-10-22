@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Already Registered</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+
+        <img id="profilePic" class="profile" src="" alt="Profile Picture" />
+        <h2>Welcome</h2>
+        <p id="welcomeText">Loading...</p>
+
+        <div class="userInfo">
+          <p><strong>User ID:</strong> <span id="userId"></span></p>
+          <p><strong>Provider:</strong> <span id="provider"></span></p>
+          <p><strong>Persistence:</strong> <span id="persistence"></span></p>
+        </div>
+
+        <button id="signOutBtn" class="signout">Sign Out</button>
+        <p class="footer">Logged in securely with Firebase Authentication</p>
+
+      </div>
+    </div>
+
+    <!--CSS-->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: url("background.jpg") center/cover no-repeat;
+        backdrop-filter: blur(8px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 12px;
+        padding: 30px;
+        width: 340px;
+        text-align: center;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      }
+
+      .profile {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+      }
+
+      .userInfo {
+        text-align: left;
+        background: #f9f9f9;
+        border-radius: 8px;
+        padding: 10px;
+        margin: 10px 0;
+      }
+
+      .signout {
+        background: #2e573a;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 15px;
+      }
+
+      .signout:hover {
+        background: #3d6f4c;
+      }
+
+      .footer {
+        margin-top: 10px;
+        font-size: 12px;
+        color: #555;
+      }
+
+    </style>
+  
+    <script type="module" src="alreadyRegistered.js" defer></script>
+
+  </body>
+</html>
