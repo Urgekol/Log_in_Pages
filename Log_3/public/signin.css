@@ -16,7 +16,7 @@ body::before {
   position: fixed;
   inset: 0;
   background: url('background.jpg') center/cover no-repeat;
-  filter: blur(12px) brightness(0.8);
+  filter: blur(10px) brightness(0.8);
   z-index: -1;
 }
 
@@ -25,7 +25,7 @@ body::before {
   align-items: stretch;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   max-width: 880px;
   width: 90%;

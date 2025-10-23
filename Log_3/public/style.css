@@ -16,19 +16,20 @@ body::before {
   position: fixed;
   inset: 0;
   background: url('background.jpg') center/cover no-repeat;
-  filter: blur(10px) brightness(.8);
+  filter: blur(10px) brightness(0.8);
   z-index: -1;
 }
 
 .container {
   display: flex;
   align-items: stretch; 
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   border-radius: 16px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   overflow: hidden;
-  max-width: 870px;
+  max-width: 880px;
   width: 90%;
+  transition: transform 0.3s ease;
 }
 
 .left,
