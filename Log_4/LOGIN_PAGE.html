@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login – GuitarVerse</title>
+        <link rel="stylesheet" href="logIn_style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <!-- LEFT IMAGE -->
+            <div class="left">
+                <div class="left-text">
+                    <h1>Welcome Back Guitarist</h1>
+                    <p>Continue mastering chords, riffs, and soulful melodies with GuitarVerse.</p>
+                </div>
+            </div>
+
+            <!-- RIGHT FORM -->
+            <div class="right">
+                <div class="form-box">
+
+                    <div class="title-bar">
+                        <h2>Login</h2>
+                        <p class="subtitle">Access your personalized guitar dashboard.</p>
+                    </div>
+
+                    <label>Your Username</label>
+                    <input id="liUser" type="text" placeholder="Enter username">
+
+                    <label>Your Password</label>
+                    <div class="password-container">
+                        <input id="liPass" type="password" placeholder="Enter password" style="padding-right:40px;">
+                        <span id="toggleLiPass">
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                    </div>
+
+                    <button class="primary-btn" onclick="login()">Login</button>
+
+                    <div class="divider">or continue with</div>
+
+                    <button class="google-btn" onclick="googleAuth()">
+                        <img src="https://www.svgrepo.com/show/475656/google-color.svg">
+                        Login with Google
+                    </button>
+
+                    <p class="login-text">
+                        Don’t have an account?  
+                        <a href="SIGN_IN _PAGE.html">Sign up</a>
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            function login()
+            {
+                const user=document.getElementById("liUser").value;
+                alert("Logged in as: "+user);
+            }
+
+            function googleAuth()
+            {
+                alert("Google Auth clicked — connect Firebase here.");
+            }
+
+            // SHOW/HIDE PASSWORD
+            const toggleLiPass = document.getElementById("toggleLiPass");
+            const liPass = document.getElementById("liPass");
+
+            toggleLiPass.addEventListener("click", () => {
+
+                if(liPass.type === "password")
+                {
+                    liPass.type = "text";
+                    toggleLiPass.innerHTML = `<i class="fa-regular fa-eye-slash"></i>`;
+                } 
+                else 
+                {
+                    liPass.type = "password";
+                    toggleLiPass.innerHTML = `<i class="fa-regular fa-eye"></i>`;
+                }
+            });
+        </script>
+
+    </body>
+</html>
