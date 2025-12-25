@@ -11,8 +11,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     signInWithPopup,
     signInWithEmailAndPassword,
     onAuthStateChanged,
-    sendPasswordResetEmail,
-    signOut
+    sendPasswordResetEmail
   } = await initFirebase();
 
 
@@ -42,6 +41,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
   loginForm.addEventListener("submit", async (e) => {
+
     e.preventDefault();
     const email = emailInput.value.trim();
     const password = passwordInput.value;
@@ -96,6 +96,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // GitHub sign-in
   githubBtn.addEventListener("click", async () => {
+    
     try 
     {
       githubBtn.disabled = true;
